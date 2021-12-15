@@ -21,5 +21,12 @@ class MainActivity : AppCompatActivity() {
 
         db.carroDao().inserir(Carro("nome", "tipo", "desc", 2018))
         db.carroDao().listAll().forEach { Log.i("APPROOM", it.toString()) }
+
+        val c1 = Carro("nome", "tipo", "desc", 1998)
+        val c2 = Carro("nome2", "tipo2", "2", 1999)
+
+        db.carroDao().insereDois(c1, c2)
+
+        //db.carroDao().deletaTodos()
     }
 }
